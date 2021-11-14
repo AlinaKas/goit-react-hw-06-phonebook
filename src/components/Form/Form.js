@@ -1,9 +1,18 @@
 import { useState } from 'react';
 import s from './Form.module.css';
+import { addContact } from '../../redux/contacts/contacts-actions';
+import { connect } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
-function Form({ onSubmit }) {
+const Form = () => {
+  // state = {
+  //   name: '',
+  //   number: '',
+  // };
+
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
+  const dispatch = useDispatch();
 
   const handleInputChange = e => {
     const { name, value } = e.currentTarget;
@@ -19,16 +28,33 @@ function Form({ onSubmit }) {
     }
   };
 
-  const handleSubmit = e => {
-    e.preventDefault();
-    onSubmit(name, number);
-    resetForm();
+  // handleInputChange = event => {
+  //   const { name, value } = event.currentTarget;
+  //   this.setState({
+  //     [name]: value,
+  //   });
+  // };
+
+  const handleSubmit = event => {
+    event.preventDefault();
+    dispatch(addContact(name, number));
+    setNumber('');
+    setName('');
   };
 
-  const resetForm = () => {
-    setName('');
-    setNumber('');
-  };
+  // const handleSubmit = e => {
+  //   e.preventDefault();
+  //   addContact(name, number);
+  //   resetForm();
+  // };
+
+  // const resetForm = () => {
+  //   setName('');
+  //   setNumber('');
+  // };
+
+  // render() {
+  //   const { name, number } = this.state;
 
   return (
     <>
@@ -68,6 +94,16 @@ function Form({ onSubmit }) {
       </form>
     </>
   );
-}
+};
+
+// const mapStateToProps = state => {
+//   return { contacts: state.contacts };
+// };
+
+// const mapDispatchToProps = dispatch => ({
+//   addContact: (name, number) => dispatch(addContact(name, number)),
+// });
+
+// export default connect(mapStateToProps, mapDispatchToProps)(Form);
 
 export default Form;
