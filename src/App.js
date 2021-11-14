@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Component } from 'react';
+// import React, { useState, useEffect, Component } from 'react';
 // import s from './App.module.css';
 // import shortid from 'shortid';
 import ContactList from './components/ContactList';
@@ -64,7 +64,7 @@ import Filter from './components/Filter';
 
 // const visibleContacts = getVisibleContacts();
 
-class App extends Component {
+function App() {
   // state = {
   //   contacts: [
   //     { id: 'id-1', name: 'Rosie Simpson', number: '459-12-56' },
@@ -75,19 +75,19 @@ class App extends Component {
   //   filter: '',
   // };
 
-  render() {
-    return (
-      <>
-        {/* <Form onSubmit={addContactHandler} />
+  // render() {
+  return (
+    <>
+      {/* <Form onSubmit={addContactHandler} />
       <Filter onChange={changeFilter} value={filter} />
       <ContactList contacts={visibleContacts} onDeleteContact={deleteContact} /> */}
 
-        <Form />
-        <Filter />
-        <ContactList />
-      </>
-    );
-  }
+      <Form />
+      <Filter />
+      <ContactList />
+    </>
+  );
 }
+// }
 
 export default App;

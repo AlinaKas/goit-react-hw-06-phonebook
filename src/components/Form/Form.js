@@ -96,14 +96,10 @@ const Form = () => {
   );
 };
 
-// const mapStateToProps = state => {
-//   return { contacts: state.contacts };
-// };
-
 // const mapDispatchToProps = dispatch => ({
 //   addContact: (name, number) => dispatch(addContact(name, number)),
 // });
 
-// export default connect(mapStateToProps, mapDispatchToProps)(Form);
+// export default connect(null, mapDispatchToProps)(Form);
 
 export default Form;
