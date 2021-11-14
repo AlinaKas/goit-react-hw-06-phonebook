@@ -18,7 +18,7 @@ const items = (state = initialContacts, { type, payload }) => {
         alert(`${payload.name} is already in contacts`);
         return state;
       } else {
-        return [...state, payload];
+        return [payload, ...state];
       }
     case DELETE:
       return state.filter(({ id }) => id !== payload);
