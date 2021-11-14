@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import s from './Form.module.css';
 import { addContact } from '../../redux/contacts/contacts-actions';
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
 import { useDispatch } from 'react-redux';
 
 const Form = () => {

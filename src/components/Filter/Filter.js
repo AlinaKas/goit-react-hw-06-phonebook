@@ -21,10 +21,10 @@ const Filter = ({ filter, onChange }) => {
   );
 };
 
-// Filter.propTypes = {
-//   filter: PropTypes.string.isRequired,
-//   onChange: PropTypes.func.isRequired,
-// };
+Filter.propTypes = {
+  filter: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+};
 
 const mapStateToProps = state => ({ filter: state.contacts.filter });
 
