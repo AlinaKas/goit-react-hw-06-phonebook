@@ -4,10 +4,14 @@ import s from './ContactList.module.css';
 // import { connect } from 'react-redux';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteContact } from '../../redux/contacts/contacts-actions';
+import {
+  getContacts,
+  getFilter,
+} from '../../redux/contacts/contacts-selectors';
 
 const ContactList = () => {
-  const contacts = useSelector(state => state.contacts.items);
-  const filter = useSelector(state => state.contacts.filter);
+  const contacts = useSelector(getContacts);
+  const filter = useSelector(getFilter);
   const dispatch = useDispatch();
 
   function getVisibleContacts() {

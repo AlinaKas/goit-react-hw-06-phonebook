@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 // import { connect } from 'react-redux';
 import { useDispatch, useSelector } from 'react-redux';
 import { filterContact } from '../../redux/contacts/contacts-actions';
+import { getFilter } from '../../redux/contacts/contacts-selectors';
 
 const Filter = () => {
-  const value = useSelector(state => state.contacts.filter);
+  const value = useSelector(getFilter);
   const dispatch = useDispatch();
 
   return (
