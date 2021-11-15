@@ -27,7 +27,7 @@ const Filter = () => {
 
 Filter.propTypes = {
   value: PropTypes.string,
-  onChange: PropTypes.func,
+  // onChange: PropTypes.func,
 };
 
 // const mapStateToProps = state => ({ value: state.contacts.filter });

@@ -6,7 +6,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { deleteContact } from '../../redux/contacts/contacts-actions';
 
 const ContactList = () => {
-  // console.log(contacts);
   const contacts = useSelector(state => state.contacts.items);
   const filter = useSelector(state => state.contacts.filter);
   const dispatch = useDispatch();
@@ -51,7 +50,7 @@ ContactList.propTypes = {
       number: PropTypes.string.isRequired,
     }),
   ),
-  onDeleteContact: PropTypes.func,
+  // onDeleteContact: PropTypes.func,
 };
 
 // const getVisibleContacts = (allContacts, filter) => {
