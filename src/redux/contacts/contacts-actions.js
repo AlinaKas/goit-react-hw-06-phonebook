@@ -2,6 +2,7 @@
 import shortid from 'shortid';
 import { createAction } from '@reduxjs/toolkit';
 
+
 export const addContact = createAction('contacts/add', (name, number) => ({
   payload: {
     name,
